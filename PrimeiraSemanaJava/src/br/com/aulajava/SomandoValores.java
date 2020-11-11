@@ -24,8 +24,8 @@ public class SomandoValores {
 
 		int valor1 = 1;
 		int valor2 = 4;
-		String mensagem = "Ocorreu um ajuste no valor da soma já que ";
-		boolean eMaior = false;
+		String mensagem = "Ocorreu um ajuste no valor da soma já que "; //para correção
+		boolean eMaior = false; //para usar no exercício e usado na correção
 		
 		int soma = valor1 + valor2;
 		
