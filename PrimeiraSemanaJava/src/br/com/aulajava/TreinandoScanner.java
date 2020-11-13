@@ -47,6 +47,7 @@ public class TreinandoScanner {
 			
 			String controle = "C"; 
 			Scanner sc = new Scanner(System.in);
+
 			while (controle.equals("C")) {
 				
 				System.out.println("Informe seu nome:");
@@ -56,7 +57,7 @@ public class TreinandoScanner {
 				System.out.println("Informe seu peso:");
 				float peso = sc.nextFloat();
 				
-			System.out.printf("Meu nome é: %s \n Minha idade é %d \n e Meu peso é: %.2f", nome, idade, peso);
+			System.out.printf("Meu nome é: %s \n Minha idade é %d \n e Meu peso é: %.2f", nome, idade, peso);			
 			break;
 			}
 
