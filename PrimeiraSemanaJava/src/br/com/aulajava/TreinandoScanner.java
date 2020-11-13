@@ -57,8 +57,16 @@ public class TreinandoScanner {
 				System.out.println("Informe seu peso:");
 				float peso = sc.nextFloat();
 				
-			System.out.printf("Meu nome é: %s \n Minha idade é %d \n e Meu peso é: %.2f", nome, idade, peso);			
-			break;
+				System.out.printf(" Meu nome é: %s \n Minha idade é %d \n e Meu peso é: %.2f \n", nome, idade, peso);			
+				
+				controle = ("A");
+				System.out.println("Agora o controle é A");
+				
+//				System.out.println("Para continuar executando o programa digite C");
+//				System.out.println("Para sair do programa digite outra coisa");
+//				controle = sc.nextLine();
+				
+				//break;
 			}
 
 		/*
@@ -141,32 +149,32 @@ public class TreinandoScanner {
 	 */
 
 	// criando o metodo (sempre fora da chave do main, que já é um método)
-	public static void verificaIdadeEPeso(float peso, int idade, String nome) {
-		if ((peso > 80 && idade > 40) || nome.equals("Roger")) {
-			System.out.println("Corre mais (metodo aqui)");
-		} else {
-			System.out.println("Come mais (metodo aqui)");
-		}
-	}
-
-	// criando o metodo (sempre fora da chave do main, que já é um método)
-	public static void verificaIdadeComSwitch(int idade) {
-
-		switch (idade) {
-		case 80:
-			System.out.println("Você tem 80 anos! (metodo aqui)");
-			break;
-
-		case 40:
-			System.out.println("Você tem 40 anos!(metodo aqui)");
-			break;
-
-		default:
-			System.out.println("Você é um ser vivo! (metodo aqui)");
-			break;
-		}
-
-	}
+//	public static void verificaIdadeEPeso(float peso, int idade, String nome) {
+//		if ((peso > 80 && idade > 40) || nome.equals("Roger")) {
+//			System.out.println("Corre mais (metodo aqui)");
+//		} else {
+//			System.out.println("Come mais (metodo aqui)");
+//		}
+//	}
+//
+//	// criando o metodo (sempre fora da chave do main, que já é um método)
+//	public static void verificaIdadeComSwitch(int idade) {
+//
+//		switch (idade) {
+//		case 80:
+//			System.out.println("Você tem 80 anos! (metodo aqui)");
+//			break;
+//
+//		case 40:
+//			System.out.println("Você tem 40 anos!(metodo aqui)");
+//			break;
+//
+//		default:
+//			System.out.println("Você é um ser vivo! (metodo aqui)");
+//			break;
+//		}
+//
+//	}
 	
 	
 }
