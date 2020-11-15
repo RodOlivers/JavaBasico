@@ -45,21 +45,34 @@ public class Principal {
 		Scanner sc = new Scanner (System.in);
 		String texto = sc.nextLine();
 		
-		String [] A = texto.split("a");
-		for (String b : A) {
-			System.out.println(b);
+		int controleAchouA = 0;
+		// contains... verifica se a string contem o caracter informado
+		// break para o for
+		// continue - ele volta para o início do for		
+		for (String a : texto.split("") ) { // com o split vazio ele quebra a string caracter por caracter
+			if (controleAchouA == 0) {
+			System.out.println(a);
+			} else {
+				controleAchouA -- ;
+			}
+			if (a.toLowerCase().contains("a")) {
+				controleAchouA = 2;
+			}
 		}
-		
-//		for (int i = 0; i < texto.length(); i++ ) {
-//			
-//			System.out.println(texto.substring(i, (i + 1)));
-//			if (texto.substring(i, (i + 1)).toLowerCase().equals("a")
-//					&& (i +2) < texto.length()) {
-//				i = i + 2;
-//			}
-//		}
-		
-
+		for (String a : texto.split("") ) {
+			if (a.toLowerCase().contains("b")) {
+				System.out.println("Encontrei um b");
+				continue;
+			}
+			System.out.println("Não encontrei um b");
+		}
+		for (String a : texto.split("")) {
+			if (a.toLowerCase().contains("b")) {
+				System.out.println("Encontrei um b");
+				break;
+			}
+			System.out.println("Não encontrei um b");
+		}
 	}
 
 }
