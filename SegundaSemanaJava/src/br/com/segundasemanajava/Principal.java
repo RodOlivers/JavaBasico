@@ -17,14 +17,14 @@ public class Principal {
 	public static void main(String[] args) {
 		// vamos Abstrair
 		Scanner sc = new Scanner(System.in);
-		int tamanho = lerValor("Qual  tamanho do array ?", sc, 0);
+		Integer tamanho = lerValor("Qual  tamanho do array ?", sc, 0);
 
 		// Crie um Array de pessoas e passem a utiliza-lo no programa
 
 		Pessoa[] pessoas = new Pessoa[tamanho];
 
-		int opcao = 0;
-		int nrRegistro = 0;
+		Integer opcao = 0;
+		Integer nrRegistro = 0;
 
 		do {
 			opcao = lerValor("Informe a opção que deseja acessar:", sc, opcao);
@@ -33,7 +33,7 @@ public class Principal {
 				System.out.println("Saindo..");
 				break;
 			case 1:
-				for (int i = 0; i < tamanho; i++) {
+				for (Integer i = 0; i < tamanho; i++) {
 					Pessoa pConsulta = pessoas[i];
 					if (pConsulta != null) {
 						System.out.printf("Nome: %s \nPeso: %.2f\nSexo: %s\n",
@@ -42,7 +42,7 @@ public class Principal {
 				}
 				break;
 			case 2:
-				for (int i = 0; i < tamanho; i++) {
+				for (Integer i = 0; i < tamanho; i++) {
 					System.out.printf("Registro nr %d \n", (i + 1));
 					adicionarValorPessoa(pessoas[i], sc);
 					System.out.println("-----------------------");
@@ -55,7 +55,7 @@ public class Principal {
 			case 4:
 				// Crie a opção 4 tenha uma seleção de qual informação o usuário deseja alterar.
 				nrRegistro = lerValor("Informe o nº do registro para alteração:", sc, nrRegistro);
-				int campoAlterando = lerValor("Qual a opção que deseja alterar ? \n1-Nome;\n2-Peso;\n3-Sexo;", sc, 0);
+				Integer campoAlterando = lerValor("Qual a opção que deseja alterar ? \n1-Nome;\n2-Peso;\n3-Sexo;", sc, 0);
 				adicionarValorPessoa(pessoas[nrRegistro - 1], sc, campoAlterando);
 				break;
 			case 5:
