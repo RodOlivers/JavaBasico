@@ -9,30 +9,26 @@ package br.com.segundasemanajava;
  */
 
 
-	public class Pessoa{
+	public class Pessoa extends ClassePadrao  {
 
-		private String nome;
 		private Float peso;
 		private Character sexo;
 		
 		//metodo contrutor executa ao Criar uma instancia da classe
 		public Pessoa () {
-			
+			super();			
 		}
 		
 		public Pessoa(String nome, Float peso, Character sexo) {
+			super();
 			this.nome = nome;
 			this.peso = peso;
 			this.sexo = sexo;
 		}
 		
-		
+		@Override
 		public String getNome() {
-			return nome;
-		}
-		
-		public void setNome(String nome) {
-			this.nome = nome;
+			return "Pessoa: " + this.nome;
 		}
 		
 		public Float getPeso() {

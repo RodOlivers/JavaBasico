@@ -29,7 +29,7 @@ public class ExercicioLivros {
 	public static void menu (Integer opcao, Livro [] livros, Scanner sc ) {
 		Integer nrRegistro = 0;
 		do {
-			opcao = Leitor.lerValor("Escolha uma opcao: \n1) Listar todos os livros", sc, opcao);
+			opcao = Leitor.lerValor("Escolha uma opcao: \n1) Listar todos os livros \n2)Cadastrar um livro \n3)Editar um livro", sc, opcao);
 			switch (opcao) {
 			case 1:
 				ControleDeLivros.imprimirLivros(livros);				

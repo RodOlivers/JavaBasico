@@ -7,9 +7,15 @@ package br.com.segundasemanajava;
  * @author Rodrigo
  *
  */
-public class Livro {
+public class Livro extends ClassePadrao { // extends é usado para extender padrões de uma classe para outras varias classes
 	
+	private Integer anoDePublicacao;
+	private String autor;
+	private String editora;
+	private Integer classificacao;
+		
 	public Livro(Integer anoDePublicacao, String nome, String autor, String editora, Integer classificacao) {
+		super();
 		this.anoDePublicacao = anoDePublicacao;
 		this.nome = nome;
 		this.autor = autor;
@@ -18,17 +24,9 @@ public class Livro {
 	}
 	
 	public Livro() {
-
+		super();
 	}
 
-	private Integer anoDePublicacao;
-	private String nome;
-	private String autor;
-	private String editora;
-	private Integer classificacao;
-		
-
-	
 	public Integer getAnoDePublicacao() {
 		return anoDePublicacao;
 	}
@@ -37,17 +35,6 @@ public class Livro {
 	public void setAnoDePublicacao(Integer anoDePublicacao) {
 		this.anoDePublicacao = anoDePublicacao;
 	}
-
-
-	public String getNome() {
-		return nome;
-	}
-
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
 
 	public String getAutor() {
 		return autor;
