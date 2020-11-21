@@ -1,19 +1,20 @@
 package br.com.segundasemanajava;
 
 public class Galinha extends Animal {
-	
-	private Float alturaDoPoleiro;
-	
-	public Float getAlturaDoPoleiro() {
-		return alturaDoPoleiro;
+
+	private Float tamanhoDoPoleiro;
+
+	public Float getTamanhoDoPoleiro() {
+		return tamanhoDoPoleiro;
 	}
 
-	public void setAlturaDoPoleiro(Float alturaDoPoleiro) {
-		this.alturaDoPoleiro = alturaDoPoleiro;
+	public void setTamanhoDoPoleiro(Float tamanhoDoPoleiro) {
+		this.tamanhoDoPoleiro = tamanhoDoPoleiro;
+	}
+
+	@Override
+	public void dizerOla() {
+		System.out.println("Olá eu sou uma Galinha!");
 	}
 	
-	@Override
-	public void dizerOla () {
-		System.out.println("Olá, eu sou um Galinha!");
-	}
 }

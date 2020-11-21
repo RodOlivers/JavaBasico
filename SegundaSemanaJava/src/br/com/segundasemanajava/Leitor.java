@@ -15,12 +15,23 @@ public class Leitor {
 		System.out.println(pergunta);
 		return sc.next();
 	}
-	
+
+	public static Float lerValor(String pergunta, Scanner sc, Float valor) {
+		System.out.println(pergunta);
+		return sc.nextFloat();
+	}
+
 	public static Integer lerValor(String pergunta, Scanner sc, Integer valor) {
 		System.out.println(pergunta);
 		return sc.nextInt();
 	}
-	
+
+	public static Character lerValor(String pergunta, Scanner sc, Character valor) {
+		System.out.println(pergunta);
+		String retorno = sc.next();
+		return retorno.charAt(0);
+	}
+
 	public static void limparConsole() {
 		try {
 
@@ -34,4 +45,21 @@ public class Leitor {
 
 	}
 
+	public static Boolean lerValor(String pergunta, Scanner sc, Boolean b) {
+		String retorno = "";
+		do {
+			System.out.println(pergunta);
+			retorno = sc.next();
+		} while (!retorno.toUpperCase().equals("SIM") || !retorno.toUpperCase().equals("NAO"));
+		if (retorno.toUpperCase().equals("SIM")) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public static Long lerValor(String pergunta, Scanner sc, Long l) {
+		System.out.println(pergunta);
+		return sc.nextLong();
+	}
 }
