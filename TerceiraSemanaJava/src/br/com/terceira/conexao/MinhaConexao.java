@@ -1,4 +1,4 @@
-package br.com.conexao;
+package br.com.terceira.conexao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
