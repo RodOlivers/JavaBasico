@@ -71,18 +71,18 @@ public class Principal {
 	}
 
 		private static void deletarUsuario(UsuarioDAO dao, Scanner sc) {
-			Usuario usuarioSelecionado = buscarUsuarioPorParteDoNome(dao, sc,
-					"Qual o identificador do usuário que deseja deletar ? ");
-			if (usuarioSelecionado != null) {
-				if (dao.deletarUsuario((usuarioSelecionado.getIdt()) > 0) {
-					System.out.printf("Usuario %s deletado com sucesso!", usuarioSelecionado.getNmeUsuario());
-				} else {
-					System.out.printf("não foi possivel deletar o usuario %s", usuarioSelecionado.getNmeUsuario());
-				}
-						
-			} else {
-				System.out.println("nenhum usuario para deletar");
-			}
+//			Usuario usuarioSelecionado = buscarUsuarioPorParteDoNome(dao, sc,
+//					"Qual o identificador do usuário que deseja deletar ? ");
+//			if (usuarioSelecionado != null) {
+//				if (dao.deletarUsuario((usuarioSelecionado.getIdt()) > 0) {
+//					System.out.printf("Usuario %s deletado com sucesso!", usuarioSelecionado.getNmeUsuario());
+//				} else {
+//					System.out.printf("não foi possivel deletar o usuario %s", usuarioSelecionado.getNmeUsuario());
+//				}
+//						
+//			} else {
+//				System.out.println("nenhum usuario para deletar");
+//			}
 		}
 
 		private static void editarUsuario(UsuarioDAO dao, Scanner sc) {
