@@ -12,8 +12,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
-@Entity(name="tb=pessoa")
+@Entity
+@Table(name= "tb_pessoa")
 public class Pessoa {
 	
 	@Id
@@ -44,7 +46,7 @@ public class Pessoa {
 		this.nome = nome;
 		this.sexo = sexo;
 		this.idade = idade;
-		this.setPersonalidades(personalidades);
+		this.personalidades = personalidades;
 	}
 	public Long getIdt() {
 		return idt;

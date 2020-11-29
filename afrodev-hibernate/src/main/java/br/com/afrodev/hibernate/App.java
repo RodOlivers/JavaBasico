@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import br.com.afrodev.hibernate.models.Personalidade;
 import br.com.afrodev.hibernate.models.Pessoa;
@@ -23,12 +24,11 @@ public class App {
 		em.getTransaction().begin();
 		Pessoa p = new Pessoa();
 		
-		p.setNome("Joãozinho");
-		p.setIdade(58);
-		p.setSexo(Sexo.MASCULINO);
+		p.setNome("Mariazinha");
+		p.setIdade(30);
+		p.setSexo(Sexo.FEMININO);
 		List<Personalidade> personalidades = new ArrayList<>();
-		personalidades.add(new Personalidade ("Extrovertido"));
-		personalidades.add(new Personalidade ("Reservado"));
+		personalidades.add(new Personalidade ("Seguro"));
 		for (int i = 0; i < personalidades.size(); i++) {
 			em.persist(personalidades.get(i));
 		}
@@ -37,16 +37,19 @@ public class App {
 		em.persist(p);
 		em.getTransaction().commit();
 		
-		
-		Query q = em.createQuery("SELECT p FROM Pessoa p where p.nome = :pNome ",Pessoa.class);
+		em.getTransaction().begin();
+		TypedQuery<Pessoa> q = em.createQuery("SELECT p FROM Pessoa p where p.nome = :pNome ", Pessoa.class);
 		
 		q.setParameter("pNome", "Mariazinha");
 		List<Pessoa> pessoas = q.getResultList();
 		
 		for (Pessoa pessoa : pessoas) {
 			System.out.println(p);
+			
+			em.remove(pessoa);
 		}
 		
+		em.getTransaction().commit();
 		em.close();
 		
  	}

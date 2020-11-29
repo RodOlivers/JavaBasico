@@ -5,8 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity(name="tb = personalidade")
+@Entity
+@Table(name="tb = personalidade")
 public class Personalidade {
 	
 	@Id
@@ -48,4 +50,8 @@ public class Personalidade {
 		this.nome = nome;
 	}
 	
+	@Override
+	public String toString() {
+		return "Identificador: ".concat(this.getIdt().toString()) .concat("\nNome: ").concat(this.getNome());
+	}
 }
